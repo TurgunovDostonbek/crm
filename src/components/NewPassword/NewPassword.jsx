@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Container, Input, Title, Wrapper } from "../Login/LoginStyle";
 import { Div } from "../Reset/ResetStyled";
 

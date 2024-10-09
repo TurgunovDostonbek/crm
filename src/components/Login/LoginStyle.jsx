@@ -79,7 +79,7 @@ Input.Num = styled(Input)`
 
 export const Button = styled.button`
   width: 100%;
-  height: Hug 48px;
+  height: 48px;
   padding: 12px 18px 12px 18px;
   border-radius: 8px;
   border: none;

@@ -7,10 +7,10 @@ import NewPassword from "../components/NewPassword/NewPassword";
 function Root() {
   return (
     <div className="Root">
-      {/* <Login /> */}
-      {/* <Reset /> */}
-      {/* <Enter /> */}
-      {/* <NewPassword /> */}
+      {/* <Login />
+      <Reset />
+      <Enter />
+      <NewPassword /> */}
     </div>
   );
 }

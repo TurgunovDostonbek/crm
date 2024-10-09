@@ -1,4 +1,3 @@
-import React from "react";
 import "../Enter/Enter.css";
 import { Container, Wrapper, Title, Button, Input } from "../Login/LoginStyle";
 import { Div } from "../Reset/ResetStyled";
@@ -9,7 +8,7 @@ function Enter() {
       <Wrapper>
         <Title>Enter Verification Code</Title>
         <Title.Description>
-          We've send a code to <span className="number">+998 90 000 00 00</span>
+          Weve send a code to <span className="number">+998 90 000 00 00</span>
         </Title.Description>
         <Div.Gap>
           <Input.Num gap="15" />
