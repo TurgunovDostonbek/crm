@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Root from "./root/Root";
+import Root from "./root/index";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

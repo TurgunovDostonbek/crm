@@ -3,7 +3,7 @@ import { Container } from "../components/Sidebar/style";
 function Root() {
   return (
     <Container>
-      <h1>Crm Projects</h1>
+      <h1>Root</h1>
     </Container>
   );
 }
