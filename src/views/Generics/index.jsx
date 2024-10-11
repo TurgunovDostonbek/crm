@@ -1,11 +1,12 @@
 import { useLocation } from "react-router-dom";
-import { Container } from "../Sidebar/style";
+import { Container } from "./style";
 
 export const Generics = () => {
   const location = useLocation();
   return (
     <Container>
-      <h1>{location.pathname}</h1>
+      <h1>{location.pathname} page </h1>
+      <h1>Comming son</h1>
     </Container>
   );
 };

@@ -8,22 +8,13 @@ import Course from "../assets/icons/course.svg?react";
 import HR from "../assets/icons/hr.svg?react";
 import Settings from "../assets/icons/setting.svg?react";
 // Components
-import { Generics } from "../view/Generics";
-// import { AnalitikaView } from "../view/AnalitikaView";
-// import FirstClassView from "../view/Lids/First";
-// import AllLidsView from "../view/Lids/All";
-// import NewStudentView from "../view/Lids/New";
-// import { ArchiveStudentsView } from "../view/Students/Archive.jsx";
-// import { ActiveStudentsView } from "../view/Students/Active.jsx";
-// import { AllStudentsView } from "../view/Students/All.jsx";
-// import GuruhlarView from "../view/Guruhlar/Guruhlar.jsx";
-// // import { ScheduleView } from "../view/Guruhlar/Schedule.jsx";
-// import { RoomsView } from "../view/Guruhlar/Rooms.jsx";
-// import HodimlarView from "../view/HR/Hodimlar.jsx";
-// import RolesView from "../view/HR/Roles.jsx";
-// import ListView from "../view/Kurslar/List.jsx";
-// import FieldView from "../view/Kurslar/Field.jsx";
-// import UmumiyView from "../view/Sozlamalar/Umumiy.jsx";
+import { Generics } from "../views/Generics";
+// import { AnalitikaView } from "../views/Analitika";
+// import LidsAllView from "../views/LidsAll";
+// import FirstClassView from "../views/FirstClass";
+// import NewStudentsView from "../views/NewStudents";
+// import GroupsView from "../views/GroupsView";
+// import GroupsRoomView from "../views/GroupsRoom";
 
 const sidebar = [
   {
@@ -32,7 +23,7 @@ const sidebar = [
     path: "/analitika",
     icon: Analitika,
     isPrivate: true,
-    element: AnalitikaView,
+    element: Generics,
     role: ["admin", "manager"],
   },
   {
@@ -46,29 +37,26 @@ const sidebar = [
     children: [
       {
         id: `2-1`,
-        parentID: 2,
         title: "Barcha Lidlar",
         path: "/lidlar/all-lids",
         isPrivate: true,
-        element: AllLidsView,
+        element: Generics,
         role: ["admin", "manager"],
       },
       {
-        parentID: 2,
         id: `2-2`,
         title: "Birinchi Dars",
         path: "/lidlar/first-class",
         isPrivate: true,
-        element: FirstClassView,
+        element: Generics,
         role: ["admin", "manager"],
       },
       {
         id: `2-3`,
         title: "Yangi Talabalar",
         path: "/lidlar/new-students",
-        parentID: 2,
         isPrivate: true,
-        element: NewStudentView,
+        element: Generics,
         role: ["admin", "manager"],
       },
     ],
@@ -80,7 +68,6 @@ const sidebar = [
     isPrivate: true,
     icon: Finance,
     element: Generics,
-    hidden: true,
     role: ["admin"],
   },
   {
@@ -95,28 +82,25 @@ const sidebar = [
       {
         id: `4-1`,
         title: "Barcha talabalar",
-        parentID: 4,
         path: "/talabalar/all-talabalar",
         isPrivate: true,
-        element: AllStudentsView,
+        element: Generics,
         role: ["admin", "manager"],
       },
-      // {
-      //   id: `4-2`,
-      //   title: "Davomat",
-      //   path: "/talabalar/davomat",
-      //   parentID: 4,
-      //   isPrivate: true,
-      //   element: Generics,
-      //   role: ["admin", "manager"],
-      // },
+      {
+        id: `4-2`,
+        title: "Davomat",
+        path: "/talabalar/davomat",
+        isPrivate: true,
+        element: Generics,
+        role: ["admin", "manager"],
+      },
       {
         id: `4-3`,
         title: "Aktive",
         path: "/talabalar/active",
-        parentID: 4,
         isPrivate: true,
-        element: ActiveStudentsView,
+        element: Generics,
         role: ["admin", "manager"],
       },
       {
@@ -124,19 +108,17 @@ const sidebar = [
         title: "Arxiv",
         path: "/talabalar/archive",
         isPrivate: true,
-        parentID: 4,
-        element: ArchiveStudentsView,
+        element: Generics,
         role: ["admin", "manager"],
       },
-      // {
-      //   id: `4-5`,
-      //   title: "Ota-onalar",
-      //   path: "/talabalar/parents",
-      //   parentID: 4,
-      //   isPrivate: true,
-      //   element: Generics,
-      //   role: ["admin", "manager"],
-      // },
+      {
+        id: `4-5`,
+        title: "Ota-onalar",
+        path: "/talabalar/parents",
+        isPrivate: true,
+        element: Generics,
+        role: ["admin", "manager"],
+      },
     ],
   },
   {
@@ -145,34 +127,31 @@ const sidebar = [
     path: "/guruhlar",
     isPrivate: true,
     icon: Groups,
-    // element: Generics,
+    element: Generics,
     role: ["admin", "mentor", "manager"],
     children: [
       {
         id: `5-1`,
-        parentID: 5,
         title: "Guruhlar",
         path: "/guruhlar/guruhlar",
         isPrivate: true,
-        element: GuruhlarView,
+        element: Generics,
         role: ["admin", "manager"],
       },
-      // {
-      //   id: `5-2`,
-      //   title: "Dars Jadvali",
-      //   parentID: 5,
-      //   path: "/guruhlar/jadval",
-      //   isPrivate: true,
-      //   element: ScheduleView,
-      //   role: ["admin", "manager"],
-      // },
+      {
+        id: `5-2`,
+        title: "Dars Jadvali",
+        path: "/guruhlar/jadval",
+        isPrivate: true,
+        element: Generics,
+        role: ["admin", "manager"],
+      },
       {
         id: `5-3`,
         title: "Xonalar",
-        parentID: 5,
         path: "/guruhlar/xonalar",
         isPrivate: true,
-        element: RoomsView,
+        element: Generics,
         role: ["admin", "manager"],
       },
     ],
@@ -190,18 +169,16 @@ const sidebar = [
         id: `6-1`,
         title: "Barcha Kurslar",
         path: "/kurslar/all-kurslar",
-        parentID: 6,
         isPrivate: true,
-        element: ListView,
+        element: Generics,
         role: ["admin", "manager"],
       },
       {
         id: `6-2`,
-        parentID: 6,
         title: "Yo'nalishlar",
         path: "/kurslar/yonalish",
         isPrivate: true,
-        element: FieldView,
+        element: Generics,
         role: ["admin", "manager"],
       },
     ],
@@ -217,20 +194,18 @@ const sidebar = [
     children: [
       {
         id: `7-1`,
-        parentID: 7,
         title: "Ro'llar",
         path: "/hr/role",
         isPrivate: true,
-        element: RolesView,
+        element: Generics,
         role: ["admin", "manager"],
       },
       {
         id: `7-2`,
-        parentID: 7,
         title: "Hodimlar",
         path: "/hr/hodimlar",
         isPrivate: true,
-        element: HodimlarView,
+        element: Generics,
         role: ["admin", "manager"],
       },
     ],
@@ -247,17 +222,15 @@ const sidebar = [
       {
         id: `8 - 1`,
         title: "Umumiy Sozlamalar",
-        parentID: 8,
-        path: "/sozlamalar/umumiy/check",
+        path: "/sozlamalar/umumiy",
         isPrivate: true,
-        element: UmumiyView,
+        element: Generics,
         role: ["admin", "manager"],
       },
       {
         id: `8 - 2`,
         title: "Manager",
-        path: "/sozlamalar/manager/tolovlar",
-        parentID: 8,
+        path: "/sozlamalar/manager",
         isPrivate: true,
         element: Generics,
         role: ["admin", "manager"],
@@ -265,38 +238,20 @@ const sidebar = [
       {
         id: `8 - 3`,
         title: "Mentor",
-        path: "/sozlamalar/ustoz/kpi",
+        path: "/sozlamalar/mentor",
         isPrivate: true,
-        parentID: 8,
         element: Generics,
         role: ["admin", "manager"],
       },
       {
         id: `8 - 4`,
         title: "Talaba",
-        path: "/sozlamalar/student/tolovlar",
-        parentID: 8,
+        path: "/sozlamalar/talaba",
         isPrivate: true,
         element: Generics,
         role: ["admin", "manager"],
       },
     ],
-  },
-  {
-    id: 9,
-    title: "Log In",
-    path: "/login",
-    isPrivate: true,
-    element: Generics,
-    hidden: true,
-  },
-  {
-    id: 10,
-    title: "Reset",
-    path: "/reset",
-    isPrivate: true,
-    element: Generics,
-    hidden: true,
   },
 ];
 
